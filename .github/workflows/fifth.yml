@@ -17,4 +17,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: uploaded_file_name
-          path: my_artifact_file
+          path: /home/runner/work/githubactions/githubactions/my_artifact_file
