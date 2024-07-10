@@ -1,0 +1,20 @@
+name: fifth workflow demo
+on: workflow_dispatch
+
+jobs:
+  artifact-creation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create and edit file
+        run: |
+          touch "my_artifact_file"
+          echo "some data in the file" > my_artifact_file
+  artifact-uploading:
+    needs: [artifact-creation]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: uploaded_file_name
+          path: my_artifact_file
