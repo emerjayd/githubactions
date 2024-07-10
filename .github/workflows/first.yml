@@ -8,5 +8,5 @@ jobs:
         run: echo "Hello World"
       - name: combo execute
         run: |
-          echo: "bit o' wisdom"
-          echo: "abcdefgh"
+          echo "bit o' wisdom"
+          echo "abcdefgh"
