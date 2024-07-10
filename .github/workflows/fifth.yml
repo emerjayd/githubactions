@@ -9,12 +9,9 @@ jobs:
         run: |
           touch "my_artifact_file"
           echo "some data in the file" > my_artifact_file
-  artifact-uploading:
-    needs: [artifact-creation]
-    runs-on: ubuntu-latest
-    steps:
+          cat my_artifact_file
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: uploaded_file_name
-          path: /home/runner/work/githubactions/githubactions/my_artifact_file
+          path: /home/runner/work/githubactions_birminghamdemo/githubactions_birminghamdemo/my_artifact_file
