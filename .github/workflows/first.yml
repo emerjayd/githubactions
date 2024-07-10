@@ -6,5 +6,7 @@ jobs:
     steps:
       - name: hello world
         run: echo "Hello World"
-      - name: bit o' wisdom
-        run: echo "abcdefgh"
+      - name: combo execute
+        run: |
+          echo: "bit o' wisdom"
+          echo: "abcdefgh"
