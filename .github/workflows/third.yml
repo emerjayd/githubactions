@@ -6,8 +6,15 @@ jobs:
     steps:
       - name: Download code
         uses: actions/checkout@v4
+  echo-some-stuff:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: echo "HELLO WORLD"
+      - name: (echo)
+        run: echo "hello world"
   nginx-deploy-test:
-    needs: [code-checkout]
+    needs: [code-checkout, echo-some-stuff]
     runs-on: ubuntu-latest
     steps:
       - name: Download container for testing
