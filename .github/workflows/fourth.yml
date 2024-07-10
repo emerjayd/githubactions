@@ -1,0 +1,8 @@
+name: fourth workflow demo
+on: [workflow_dispatch, push]
+jobs:
+  gather-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output info
+        run: echo "${{ toJSON( github ) }}"
